@@ -12,6 +12,7 @@ export default () => (
             node {
               id
               name
+              text(locale: en)
               price
               image {
                 url
@@ -41,6 +42,7 @@ render={data => (
               data-item-price={product.price}
               data-item-image={product.image.url}
               data-item-name={product.name}
+              data-item-text={product.text}
               data-item-url={`/`}
             >
               <div className="Product__image">
@@ -51,6 +53,7 @@ render={data => (
                   <div className="Product__price">
                     {product.price}€
                   </div>
+                  {product.text}
                 </div>
                 <span className="Product__buy">Buy now</span>
               </div>
